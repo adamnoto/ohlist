@@ -29,4 +29,6 @@ Hoe.spec "ohlist" do
   # license "MIT" # this should match the license in the README
 end
 
+Rake::Task[:test].prerequisites << :compile
+
 # vim: syntax=ruby
