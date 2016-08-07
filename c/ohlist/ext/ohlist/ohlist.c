@@ -14,6 +14,16 @@ fold(int argNum, VALUE list, VALUE accumulator, VALUE lambda) {
         accumulator = rb_yield_values(2, rb_ary_entry(list, i), accumulator);
       }
     }
+  } else if (argNum == 3) {
+    if (rb_class_of(lambda) != rb_cProc) {
+      rb_raise(rb_eTypeError, "Expected Proc callback");
+    }
+
+    for(i = 0; i<listLen; i++) {
+      accumulator = rb_funcall(lambda, rb_intern("call"), 2, rb_ary_entry(list, i), accumulator);
+    }
+  } else {
+    rb_raise(rb_eArgError, "Unexpected number of arguments. Accepts 2..3");
   }
 
   return accumulator;
