@@ -16,7 +16,7 @@ Hoe.spec "ohlist" do
   # you'll never have to touch them again!
   # (delete this comment too, of course)
 
-  # developer("FIX", "FIX@example.com")
+  developer("Adam Pahlevi Baihaqi", "adam.pahlevi@gmail.com")
 
   # license "MIT" # this should match the license in the README
 end
