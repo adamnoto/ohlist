@@ -1,10 +1,7 @@
 = ohlist
 
-home  :: FIX (url)
-code  :: FIX (url)
-rdoc  :: FIX (url)
-bugs  :: FIX (url)
-... etc ...
+home  :: http://github.com/saveav/ohlist
+code  :: http://github.com/saveav/ohlist
 
 == DESCRIPTION:
 
